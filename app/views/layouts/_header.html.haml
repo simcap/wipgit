@@ -1,0 +1,5 @@
+%header
+  - if session[:user_id]
+    = link_to 'Sign out', session_path, method: :delete
+  - else session[:user_id]
+    = link_to 'Sign in', new_session_path

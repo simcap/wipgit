@@ -1,0 +1,3 @@
+%ul
+  - @commits.each do |commit|
+    %li #{commit.commit.message} #{commit.commit.author.date}

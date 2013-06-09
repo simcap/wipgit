@@ -1,4 +1,19 @@
 Wipgit::Application.routes.draw do
+
+  #get "wip/:repo_id" => "wips#show", as: :wip
+
+  resources :repos do
+    resource :wip, only: [:show] do
+      member do
+        get "on/:wip_date" => "wips#on"
+      end
+    end
+  end
+
+  get "me" => "me#show"
+
+  resource :session, only: [:new, :create, :destroy]
+
   root to: 'welcome#index'
 
   get "welcome/index"

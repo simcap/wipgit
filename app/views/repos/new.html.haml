@@ -1,0 +1,8 @@
+%h1
+  New repo
+
+= semantic_form_for @repo do |f|
+  = f.inputs :name, :project
+  = f.input :user_id, as: :hidden
+  = f.actions
+

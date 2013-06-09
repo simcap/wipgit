@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'sqlite3'
 
@@ -21,24 +19,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'formtastic'
+gem 'haml'
+gem 'octokit', '~> 1.24.0'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
-
-gem "formtastic"
-gem "haml"
 group :test, :development do
   gem "rspec-rails"
   gem "factory_girl_rails"
