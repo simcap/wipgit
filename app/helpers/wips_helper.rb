@@ -8,6 +8,10 @@ module WipsHelper
     datetime.strftime("%Y-%m-%d")
   end
 
+  def display_time(datetime)
+    datetime.strftime("%H:%m")
+  end
+
   def display_day_after(datetime)
     datetime.tomorrow.strftime("%Y-%m-%d")
   end

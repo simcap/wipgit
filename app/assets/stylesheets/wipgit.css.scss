@@ -1,0 +1,52 @@
+#commits-container {
+  margin: 0 2em;
+  width: 960px;
+}
+
+section.commits {
+  float: left;
+  padding: 1em;
+  margin: 0.3em;
+  border: solid 1px;
+
+  .commit {
+      clear: both;
+
+      .committer {
+        float: left;
+        width: 85px;
+        font-size: 60%;
+      }
+
+      .infos {
+        margin-left: 1em;
+        float: left;
+        width: 450px;
+        font-size: 80%;
+        color: #cccccc;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        box-shadow: 3px 3px 4px #000;
+        -moz-box-shadow: 3px 3px 4px #000;
+        -webkit-box-shadow: 3px 3px 4px #000;
+      }
+  }
+}
+
+section#current-commits {
+  width: 580px;
+}
+
+section#commits-before {
+  width: 100px;
+}
+
+section#commits-after {
+  width: 100px;
+}

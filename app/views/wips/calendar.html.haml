@@ -1,4 +1,4 @@
-%div#commit-container
+%div#commits-container
   %section#commits-before.commits
     %h1
       Before
@@ -8,9 +8,17 @@
   %section#current-commits.commits
     %h1
       Current #{display_date(@asked_date)}
-    %ul
     - @commits.each do |commit|
-      %li #{commit.commit.message} #{commit.commit.author.date}
+      .commit
+        .committer
+          %img{src: "#{commit.avatar_url}"}
+          =commit.committer_name
+        .infos
+          .metadata
+            =display_time(commit.commit_date)
+            %a{href: commit.url} #{commit.sha}
+          .message
+            %pre #{commit.message}
 
   %section#commits-after.commits
     %h1
