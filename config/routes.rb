@@ -5,7 +5,8 @@ Wipgit::Application.routes.draw do
   resources :repos do
     resource :wip, only: [:show] do
       member do
-        get "on/:wip_date" => "wips#on"
+        get "on/:wip_date" => "wips#on", as: :ondate
+        get "today" => "wips#today"
       end
     end
   end

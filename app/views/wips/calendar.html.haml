@@ -1,0 +1,20 @@
+%div#commit-container
+  %section#commits-before.commits
+    %h1
+      Before
+    - day_before_as_string = display_day_before(@asked_date)
+    = link_to "Day before (#{day_before_as_string})", ondate_repo_wip_path(@repo, day_before_as_string)
+
+  %section#current-commits.commits
+    %h1
+      Current #{display_date(@asked_date)}
+    %ul
+    - @commits.each do |commit|
+      %li #{commit.commit.message} #{commit.commit.author.date}
+
+  %section#commits-after.commits
+    %h1
+      After
+    - day_after_as_string = display_day_after(@asked_date)
+    = link_to "Day after (#{day_after_as_string})", ondate_repo_wip_path(@repo, day_after_as_string)
+

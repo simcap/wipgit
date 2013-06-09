@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+
+#commit-container {
+  width: 960px;
+  margin 0 auto;
+}
+
+section.commits {
+  padding: 1em;
+  margin: 0.3em;
+  border: solid 1px;
+}
+
+section#current-commits {
+  float: left;
+  width: 480px;
+}
+
+section#commits-before {
+  float: left;
+  width: 150px;
+}
+
+section#commits-after {
+  float: left;
+  width: 150px;
+}
