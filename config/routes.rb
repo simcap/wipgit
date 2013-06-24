@@ -15,9 +15,7 @@ Wipgit::Application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
 
-  root to: 'welcome#index'
-
-  get "welcome/index"
+  root to: 'me#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
