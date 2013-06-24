@@ -3,7 +3,7 @@
     %h1
       Before
     - day_before_as_string = display_day_before(@asked_date)
-    = link_to "Day before (#{day_before_as_string})", ondate_repo_wip_path(@repo, day_before_as_string)
+    = link_to "Day before (#{day_before_as_string})", repo_wip_ondate_path(@repo, day_before_as_string)
 
   %section#current-commits.commits
     %h1
@@ -24,5 +24,5 @@
     %h1
       After
     - day_after_as_string = display_day_after(@asked_date)
-    = link_to "Day after (#{day_after_as_string})", ondate_repo_wip_path(@repo, day_after_as_string)
+    = link_to "Day after (#{day_after_as_string})", repo_wip_ondate_path(@repo, day_after_as_string)
 

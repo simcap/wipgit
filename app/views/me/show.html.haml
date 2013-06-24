@@ -1,11 +1,11 @@
 %h1
   Welcome #{@user.username}
 
-
 %div(ng-controller="ReposCtrl")
   %ul
     %li(ng-repeat="repo in repos")
-      {{repo.name}} {{repo.project}}
+      {{repo.uri}}
+      =link_to "see today"
 
 %h2
   =link_to "Your repos", repos_path

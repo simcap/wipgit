@@ -3,11 +3,9 @@ Wipgit::Application.routes.draw do
   #get "wip/:repo_id" => "wips#show", as: :wip
 
   resources :repos do
-    resource :wip, only: [:show] do
-      member do
-        get "on/:wip_date" => "wips#on", as: :ondate
-        get "today" => "wips#today"
-      end
+    controller "wip" do
+      get "wip/:wip_date", action: :on, as: :wip_ondate
+      get "wip/today", action: :today
     end
   end
 

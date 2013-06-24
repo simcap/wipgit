@@ -1,8 +1,7 @@
 class CreateRepos < ActiveRecord::Migration
   def change
     create_table :repos do |t|
-      t.string :name
-      t.string :project
+      t.string :uri
       t.references :user
 
       t.timestamps

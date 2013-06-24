@@ -2,7 +2,7 @@
   Your repos
 %ul
   - @repos.each do |repo|
-    %li #{repo.name} #{repo.project}
+    %li #{repo.uri}
     = link_to "wip", today_repo_wip_path(repo)
     = link_to "delete", repo_path(repo), method: :delete
 = link_to "New repo", new_repo_path

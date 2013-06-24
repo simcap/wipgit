@@ -1,10 +1,6 @@
-class WipsController < ApplicationController
+class WipController < ApplicationController
 
-  before_filter :load_repo
-
-  def show
-    @commits = Octokit.commits("#{@repo.name}/#{@repo.project}")
-  end
+  before_filter :current_repo
 
   def today
     @asked_date = DateTime.now
@@ -20,7 +16,7 @@ class WipsController < ApplicationController
 
   private
 
-  def load_repo
-    @repo = Repo.find(params[:repo_id])
+  def current_repo
+    @repo ||= Repo.find(params[:repo_id])
   end
 end
